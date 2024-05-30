@@ -1,0 +1,8 @@
+.score-button {
+    min-width: 48px; /* 버튼의 최소 너비 설정 */
+    padding: 6px 12px; /* 버튼 내부의 패딩 설정 */
+}
+
+.score-buttons {
+    gap: 10px; /* 버튼 사이의 간격을 10px로 설정 */
+}

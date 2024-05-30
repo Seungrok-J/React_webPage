@@ -1,0 +1,38 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: black; /* Bootstrap primary link color for consistency */
+    padding: 5px;
+    font-size: 2em;
+}
+
+.dropdown-arrow {
+    font-size: 0.5em !important; /* 화살표 크기를 h1의 크기 대비 작게 조정 */
+    vertical-align: middle; /* 화살표를 텍스트 중앙에 위치시키기 */
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border: 1px solid #ddd;
+    min-width: 100px; /* Adjust width as needed */
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f8f8f8;
+}

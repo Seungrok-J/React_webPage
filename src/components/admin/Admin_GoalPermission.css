@@ -1,0 +1,79 @@
+.goal-permission-management .description, .goal-permission-management .admin-note, .goal-permission-management .reference-box p {
+    font-size: 0.875rem; /* 폰트 크기 조정 */
+}
+
+.goal-permission-management .sub-header {
+    margin-top: 20px;
+    font-size: 1rem; /* 세부 권한 설정 제목 크기 조정 */
+}
+
+.goal-permission-management .access-type {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* 라디오 버튼 간격 조정 */
+}
+
+.goal-permission-management .table th, .goal-permission-management .table td {
+    text-align: center; /* 테이블 내용 중앙 정렬 */
+}
+
+.goal-permission-management .save-button {
+    margin-top: 10px;
+}
+.detail-permission {
+    font-size: 18px; /* 글꼴 크기를 18px로 설정 */
+    font-weight: bold; /* 글꼴을 굵게 설정 */
+    margin-bottom: 10px; /* 마지막 요소 사이의 거리 */
+    
+}
+
+.custom-radio .custom-control-label {
+    font-size: 8px; /* 폰트 크기를 14px로 설정 */
+    font-weight: normal; /* 굵기를 보통으로 설정 */
+}
+
+
+.description {
+    margin-bottom: 20px; /* 설명과 다음 요소 사이의 거리 */
+}
+.form-group {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* 희미한 회색 테두리 */
+    padding: 20px; /* 내부 여백 */
+    background-color: #fff; /* 배경색 흰색 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 미묘한 그림자 효과 */
+    transition: box-shadow 0.3s ease; /* 그림자 효과 부드럽게 전환 */
+}
+
+.form-group:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 마우스 오버 시 그림자 강조 */
+}
+.save-button {
+    padding: 5px 10px; /* 상하, 좌우 패딩을 줄여 크기 축소 */
+    font-size: 10px; /* 폰트 크기 줄이기 */
+    border-radius: 4px; /* 모서리 둥근 정도 조절 */
+}
+.mb-3_access-type{
+    margin-bottom : 40px;
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.mt-4{
+    margin-bottom :40px;
+}
+.reference-box{
+    border-radius: 8px; /* 모서리 둥글게 */
+    max-width: 300px;
+    margin :auto;
+}
+.reference-box p{
+    margin : 0px;
+}
+.smallboxH{
+    font-weight: bold ;
+}
+.custom-radio-me-3{
+    margin-right: 10px;
+}

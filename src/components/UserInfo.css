@@ -1,0 +1,31 @@
+/* UserInfo.css */
+.user-info-container {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .user-info-field {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .user-info-field strong {
+    color: #555;
+  }
+  
+  .edit-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+  

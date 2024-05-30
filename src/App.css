@@ -1,0 +1,477 @@
+/* 기본 스타일 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 헤더 스타일 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: calc(100% - 40px);
+  /* 여백 고려 */
+  top: 20px;
+  /* 상단 여백 */
+  left: 20px;
+  /* 좌측 여백 */
+  right: 20px;
+  /* 우측 여백 */
+  border: 1px solid #ccc;
+  /* 테두리 추가 */
+  z-index: 1000;
+}
+
+/* 메인 컨텐츠 영역 */
+.main-content {
+  position: relative;
+  /* 상대 위치 */
+  top: 20px;
+  /* 헤더 높이 및 여백 고려 */
+  margin: 0 20px;
+  /* 좌우 여백 */
+  background-color: #fff;
+  /* 배경색 */
+  padding: 30px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  /* 그림자 효과 */
+  margin-left: 250px;
+  padding-top :20px;
+  height : calc(100vh - 120px);
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+  position: fixed;
+  top: 75px;
+  /* 헤더의 높이만큼 아래로 설정 */
+  left: 20px;
+  width: 200px;
+  height: calc(100vh - 120px);
+  /* 전체 뷰포트 높이에서 헤더 높이를 뺀 값 */
+  padding: 20px;
+  background-color: #ffffff56;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  /* 내용이 많을 경우 스크롤바 표시 */
+}
+
+
+
+/* 리스트 스타일 재정의 */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* 링크 및 버튼 스타일 */
+/* 링크 스타일 */
+a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 사이드바 확장 시 */
+.sidebar-expanded {
+  width: 220px;
+}
+
+/* 카테고리 아이템 스타일 */
+.category-item {
+  padding: 10px 15px;
+  margin: 5px 0;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.category-item.open {
+  display: block;
+  /* 열려있는 항목의 하위 리스트 보여주기 */
+  background-color: #e9ecef;
+}
+
+/* 하위 카테고리 리스트 */
+.subcategory-list {
+  display: none;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.category-item.open .subcategory-list {
+  display: block;
+  /* 열려있는 항목의 하위 리스트 보여주기 */
+  z-index: 2;
+}
+
+.category-item:hover,
+.category-item.open {
+  background-color: #e0e0e0;
+}
+
+
+/* 하위 카테고리 아이템 스타일 */
+.subcategory-item a {
+  color: hsl(0, 0%, 20%);
+  /* 회색조로 변경 */
+  padding: 10px;
+  text-decoration: none;
+  /* 밑줄 제거 */
+  font-weight: normal;
+  /* 폰트 두께 정상 */
+  transition: color 0.3s ease;
+  /* 색상 변경 트랜지션 */
+}
+
+.subcategory-item {
+  padding-top: 10px;
+}
+
+.subcategory-item:hover {
+  color: #555;
+  /* 호버 시 색상 변경 */
+  text-decoration: underline;
+  /* 호버 시 밑줄 추가 */
+}
+
+/* 홈 버튼 스타일 통합 */
+.category-item[data-category="home"] {
+  opacity: 1;
+  /* 항상 투명도 1 */
+}
+
+/* 일반 카테고리 아이템 희미 처리 (홈 제외) */
+.category-item:not(.open):not([data-category="home"]) {
+  opacity: 0.5;
+  /* 투명도 조정 */
+}
+
+.button {
+  background-color: #007BFF;
+  /* 밝은 파란색 */
+  color: white;
+  /* 흰색 글자 */
+  padding: 10px 20px;
+  /* 패딩 */
+  border: none;
+  /* 테두리 없음 */
+  border-radius: 20px;
+  /* 둥근 모서리 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* 그림자 효과 */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  /* 부드러운 전환 효과 */
+  cursor: pointer;
+  /* 클릭 가능한 항목임을 나타내는 커서 */
+  font-size: 16px;
+  /* 글자 크기 */
+  font-weight: bold;
+  /* 글자 굵기 */
+  outline: none;
+  /* 포커스 아웃라인 제거 */
+}
+
+.button:hover {
+  background-color: #0056b3;
+  /* 호버 시 더 진한 파란색 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* 호버 시 그림자 강조 */
+  transform: translateY(-2px);
+  /* 호버 시 약간 위로 이동 */
+}
+
+.button:active {
+  background-color: #004085;
+  /* 클릭 시 더욱 진한 파란색 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* 클릭 시 그림자 변화 */
+}
+
+
+/* 목표관리 css */
+.page-management-container {
+  padding: 20px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  margin: 0;
+  flex-grow: 1;
+  /* 헤더의 남은 공간을 차지하게 함 */
+}
+
+.add-cycle-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.table-container {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  /* 테두리 간격을 조정할 수 있게 함 */
+  border-spacing: 0;
+  /* 테두리 사이의 간격을 없앰 */
+
+}
+
+table {
+  border-radius: 8px;
+  /* 전체 테이블의 모서리 둥글게 */
+  overflow: hidden;
+  /* 둥근 모서리에서 내용 넘침 방지 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* 그림자 효과 추가 */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+tr {
+  cursor: pointer;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding-left: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+.checkbox-cell {
+  width: 60px;
+  /* 셀의 너비를 60px로 설정 */
+  text-align: center;
+  /* 셀 내용을 가운데 정렬 */
+  vertical-align: middle;
+  /* 셀 내용을 세로 방향 중앙에 배치 */
+}
+
+.avatar-cell {
+  width: 60px;
+  /* 셀의 너비를 60px로 설정 */
+  text-align: center;
+  /* 셀 내용을 가운데 정렬 */
+  vertical-align: middle;
+  /* 셀 내용을 세로 방향 중앙에 배치 */
+}
+
+.permission-cell {
+  width: 100px;
+  /* 셀의 너비를 60px로 설정 */
+  text-align: center;
+  /* 셀 내용을 가운데 정렬 */
+  vertical-align: middle;
+  /* 셀 내용을 세로 방향 중앙에 배치 */
+}
+
+.avatar-circle {
+  width: 30px;
+  /* 원 크기를 30px로 조정 */
+  height: 30px;
+  /* 높이도 30px로 조정 */
+  background-color: #007bff;
+  /* 배경색을 파란색으로 설정 */
+  border-radius: 50%;
+  /* 원형 모양 유지 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  /* 폰트 크기 조정 */
+  color: white;
+  overflow: hidden;
+  /* 내용이 넘칠 경우 숨김 처리 */
+}
+
+
+
+.delete-button {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #ff7875;
+  opacity: 0.8;
+}
+/* 리뷰페이지 css */
+.review-form-group {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fcfbfb51;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.review-form-group:hover {
+  background-color:#e0f2ff;
+}
+.review-radio{
+  margin-right: 10px;
+}
+.form-label{
+  font-weight: bold;
+}
+.score-button {
+  min-width: 48px; 
+  padding: 6px 12px; 
+}
+.badge{
+  --bs-badge-font-size : 15px;
+}
+
+/* 다크모드 슬라이드 */
+/* 스위치 스타일 */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* 너비 */
+  height: 34px; /* 높이 */
+}
+
+/* 숨김 설정된 원래 체크박스 */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* 슬라이더 스타일 */
+/* 스위치 스타일 */
+/* 스위치 스타일 */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* 스위치 너비 */
+  height: 34px; /* 스위치 높이 */
+}
+
+/* 숨김 설정된 원래 체크박스 */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* 슬라이더 스타일 */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* 슬라이더 기본 배경 색상 */
+  transition: .4s;
+  border-radius: 34px; /* 원형 모양 */
+}
+
+.slider:before {
+  position: absolute;
+  content: "\f185"; /* 태양 아이콘 유니코드 */
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: yellow; /* 태양색 */
+  border-radius: 50%;
+  font-family: "Font Awesome 5 Free"; /* 폰트 패밀리 설정 */
+  font-weight: 900; /* 폰트 아이콘 굵기 */
+  color: black; /* 아이콘 색상 */
+  transition: .4s;
+}
+
+/* 다크 모드에서 초승달 아이콘 */
+input:checked + .slider:before {
+  content: "\f186"; /* 초승달 아이콘 유니코드 */
+  transform: translateX(26px); /* 체크됐을 때 원 이동 */
+  background-color: white; /* 초승달색 */
+  color: black; /* 아이콘 색상 */
+}
+
+input:checked + .slider {
+  background-color: #2196F3; /* 활성화 시 배경 색상 */
+}
+
+.ai-button {
+  background-color: #5cb85c; /* 녹색 톤 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.ai-button:hover {
+  background-color: #4cae4c; /* 어두운 녹색 톤으로 변경 */
+  transform: translateY(-2px); /* 버튼을 위로 약간 올림 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+}

@@ -1,0 +1,79 @@
+/* 기본 모달 스타일 */
+.check-in-modal .modal-content {
+    border-radius: 10px; /* 모달의 모서리를 둥글게 처리 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 모달에 그림자 효과 추가 */
+}
+
+.check-in-modal .modal-header {
+    background-color: #f8f9fa ; /* 모달 헤더의 배경 색상 */
+    border-bottom: 1px solid #e9ecef; /* 헤더 아래에 경계선 추가 */
+    padding: 1rem; /* 헤더 내부 패딩 */
+}
+
+.check-in-modal .modal-title {
+    color: #495057; /* 헤더 타이틀 색상 */
+    font-weight: bold; /* 글씨 굵기 */
+}
+
+.check-in-modal .close {
+    color: #6c757d; /* 닫기 버튼 색상 */
+    opacity: 0.5; /* 닫기 버튼 투명도 */
+}
+
+.check-in-modal .close:hover {
+    opacity: 0.75; /* 호버 시 닫기 버튼 투명도 변경 */
+}
+
+/* 모달 본문 스타일 */
+.check-in-modal .modal-body {
+    padding: 20px; /* 본문 내부 패딩 */
+    line-height: 1.5; /* 줄 간격 */
+    font-size: 16px; /* 폰트 크기 */
+}
+
+/* 입력 필드 스타일 */
+.check-in-modal input[type="range"],
+.check-in-modal input[type="textarea"],
+.check-in-modal input[type="date"] {
+    margin-top: 10px; /* 입력 필드 상단 여백 */
+    margin-bottom: 20px; /* 입력 필드 하단 여백 */
+}
+
+.check-in-modal .form-control {
+    box-shadow: none; /* 입력 필드 그림자 제거 */
+}
+
+/* 드롭다운 메뉴 스타일 */
+.check-in-modal .dropdown-menu {
+    border-radius: 5px; /* 드롭다운 메뉴 모서리 둥글게 처리 */
+}
+
+.check-in-modal .dropdown-item {
+    color: #495057; /* 드롭다운 항목 색상 */
+    cursor: pointer; /* 마우스 커서 변경 */
+}
+
+.check-in-modal .dropdown-item:hover {
+    background-color: #f8f9fa; /* 호버 시 배경 색상 변경 */
+}
+
+/* 모달 푸터 스타일 */
+.check-in-modal .modal-footer {
+    padding: 1rem; /* 푸터 내부 패딩 */
+    border-top: 1px solid #e9ecef; /* 푸터 상단에 경계선 추가 */
+}
+
+.check-in-modal .btn-primary {
+    background-color: #007bff; /* 주 버튼 배경 색상 */
+    border-color: #007bff; /* 주 버튼 경계선 색상 */
+}
+
+.check-in-modal .btn-secondary {
+    background-color: #6c757d; /* 보조 버튼 배경 색상 */
+    border-color: #6c757d; /* 보조 버튼 경계선 색상 */
+}
+
+/* 호버 효과 추가 */
+.check-in-modal .btn:hover {
+    opacity: 0.85; /* 버튼 호버 시 투명도 변경 */
+}

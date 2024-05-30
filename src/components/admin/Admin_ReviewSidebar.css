@@ -1,0 +1,96 @@
+/* Admin_ReviewSidebar.css */
+
+.review-sidebar {
+  width: 250px; /* 사이드바의 너비 설정 */
+  background-color: #f8f9fa; /* 배경 색상 */
+  padding: 40px; /* 패딩 */
+  border-right: 2px solid #dee2e6; /* 오른쪽 경계선 */
+}
+
+.review-sidebar .steps {
+  list-style-type: none; /* 기본 목록 스타일 제거 */
+  padding: 0;
+  margin: 0;
+}
+
+.review-sidebar .steps li {
+  display: flex;
+  align-items: center; /* 아이콘과 텍스트를 세로 중앙 정렬 */
+  font-size: 19px; /* 폰트 크기 */
+  margin-bottom: 40px; /* 항목 간 간격 */
+  color: #495057; /* 기본 텍스트 색상 */
+}
+
+.review-sidebar .steps li .icon {
+  margin-right: 10px; /* 아이콘과 텍스트 간 간격 */
+  font-size: 40px; /* 아이콘 크기 */
+}
+
+.review-sidebar .steps li.completed .icon,
+.review-sidebar .steps li.completed {
+  color: #28a745; /* 완료된 단계의 색상 */
+}
+
+.review-sidebar .steps li.current .icon,
+.review-sidebar .steps li.current {
+  color: #007bff; /* 현재 단계의 색상 */
+  font-weight: bold; /* 글씨 두께 */
+}
+
+.review-sidebar .steps li.pending .icon,
+.review-sidebar .steps li.pending {
+  color: #6c757d; /* 대기 중인 단계의 색상 */
+}
+
+.steps {
+  list-style: none;
+  /* 기본 목록 스타일 제거 */
+  padding: 0;
+  /* 패딩 제거 */
+}
+
+.steps li {
+  display: flex;
+  align-items: center;
+  /* 아이콘과 텍스트 정렬 */
+  margin-bottom: 10px;
+  /* 항목 간 간격 */
+  color: #ccc;
+  /* 기본 텍스트 색상 */
+}
+
+.steps li .icon {
+  width: 20px;
+  /* 아이콘 너비 */
+  height: 20px;
+  /* 아이콘 높이 */
+  margin-right: 10px;
+  /* 아이콘과 텍스트 간격 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* 원형 아이콘 */
+  background-color: #ccc;
+  /* 기본 아이콘 색상 */
+  color: white;
+  /* 아이콘 내 텍스트 색상 */
+}
+
+.steps li.completed .icon {
+  background-color: green;
+  /* 완료된 항목의 아이콘 색상 */
+  content: '✓';
+  /* 체크 마크 */
+}
+
+.steps li.current .icon {
+  background-color: blue;
+  /* 현재 항목의 아이콘 색상 */
+}
+
+.steps li.current,
+.steps li.completed {
+  color: black;
+  /* 완료 및 현재 항목 텍스트 색상 강조 */
+}

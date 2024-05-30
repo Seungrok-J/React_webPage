@@ -1,0 +1,104 @@
+/* 기본 색상 정의 */
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --header-bg-color: #fff;
+    --header-text-color: #333; /* 헤더 텍스트 색상 */
+    --main-content-bg-color: #fff;
+    --sidebar-bg-color: #ffffff56;
+    --link-color: #333;
+    --button-bg-color: #007BFF;
+    --button-text-color: white;
+    --table-header-bg-color: #f4f4f4;
+    --border-color: #ddd; /* 보더 색상 추가 */
+}
+
+/* 다크 모드 색상 정의 */
+[data-theme="dark"] {
+    --background-color: #212121; /* 조금 더 어두운 배경 */
+    --text-color: #bbb; /* 밝은 회색 텍스트 */
+    --header-bg-color: #2C2F33; /* 어두운 헤더 배경 */
+    --header-text-color: #fff; /* 백색 헤더 텍스트 */
+    --main-content-bg-color: #333; /* 중간 정도의 어두운 배경 */
+    --sidebar-bg-color: #23272A; /* 더욱 어두운 사이드바 배경 */
+    --link-color: #7596c8; /* 다크 모드에서는 조금 밝은 파란색 링크 */
+    --button-bg-color: #5865F2; /* 디스코드 블루와 유사한 버튼 배경 */
+    --button-text-color: #E9E9E9; /* 조금 더 어두운 텍스트 색상 */
+    --table-header-bg-color: #484B51; /* 어두운 테이블 헤더 */
+    --border-color: #424242; /* 어두운 테두리 */
+    --form-bg-color: #333; /* 폼 배경 색상 */
+    --form-text-color: #ccc; /* 폼 텍스트 색상 */
+    --table-bg-color: #2C2F33; /* 테이블 배경 색상 */
+    --table-text-color: #ddd; /* 테이블 텍스트 색상 */
+    --table-border-color: #444; /* 테이블 보더 색상 */
+    --input-bg-color: #444; /* 입력 필드 배경 색상 */
+    --input-border-color: #555; /* 입력 필드 보더 색상 */
+    --input-text-color: #eee; /* 입력 필드 텍스트 색상 */
+    --info-bg-color: #2C2F33; /* 정보 박스 배경 색상 */
+    --info-text-color: #bbb; /* 정보 박스 텍스트 색상 */
+}
+
+/* 스타일 적용 */
+body, html {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color); /* 헤더 텍스트 색상 적용 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--border-color); /* 테두리 추가 */
+}
+
+.main-content {
+    background-color: var(--main-content-bg-color);
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+}
+
+th {
+    background-color: var(--table-header-bg-color);
+}
+/* 다크 모드 스타일 */
+[data-theme="dark"] {
+    --card-background-color: #333; /* 카드 배경 색상 */
+    --card-text-color: #ccc; /* 카드 텍스트 색상 */
+    --list-group-item-background-color: #444; /* 리스트 그룹 아이템 배경 색상 */
+    --list-group-item-text-color: #ddd; /* 리스트 그룹 아이템 텍스트 색상 */
+  }
+  
+  .card {
+    background-color: var(--card-background-color);
+    color: var(--card-text-color);
+  }
+  
+  .list-group-item {
+    background-color: var(--list-group-item-background-color);
+    color: var(--list-group-item-text-color);
+  }
+  
+
+  .form-group {
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+  }
+
+ 

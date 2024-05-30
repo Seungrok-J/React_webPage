@@ -1,0 +1,94 @@
+/* My_CreateGoalModal.css */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-height: 90vh; /* 최대 높이 설정 */
+    background: rgba(255, 255, 255, 0); /* 완전 투명 */
+    border-radius: 8px;
+    z-index: 1050;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    height: auto;
+}
+
+
+.modal-content {
+    padding: auto;
+    overflow-y: auto; /* 스크롤바 추가 */
+    max-height: 75vh; /* 내용이 많을 경우 스크롤 */
+    width: 100%;
+    height: 100%;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 16px 20px;
+}
+
+.modal-form {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+.ReactSelect__control,
+.datepicker {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom : 10px;
+}
+
+.ReactSelect__control {
+    display: flex;
+}
+
+
+
+.cancel-button {
+    background-color: red;
+    margin-right: 10px;
+}
+
+.cancel-button:hover {
+    background-color: #545b62;
+}
+
+.modal-footer {
+    text-align: right;
+    padding: auto;
+}
+
+/* 스타일링을 위해 추가된 Editor 스타일 */
+.DraftEditor-root {
+    background: #fff;
+    border: 1px solid #ccc;
+    font-family: 'Helvetica', sans-serif;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto; /* 에디터 내 스크롤바 추가 */
+}
+
+.DraftEditor-editorContainer,
+.DraftEditor-root,
+.DraftEditor-content {
+    height: 100%;
+}
